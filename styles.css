@@ -76,10 +76,9 @@ nav .checkbox i {
 ul {
   display: flex;
   align-items: center;
-
   gap: 1rem;
   list-style: none;
-  transition: left 0.3s;
+  transition: left 0.3s ease-in-out;
 }
 h3{text-align: start;
     color: var(--text-dark);
@@ -92,10 +91,11 @@ ul li a {
   text-decoration: none;
   font-weight: 600;
   color: var(--text-dark);
-  transition: all 0.3s ease-in-out;
+  transition: all 0.5s ease-in-out;
 }
 
 ul li a:hover {
+  padding-block:.2rem ;
   border-top-color: var(--secondary-color);
   border-bottom-color: var(--secondary-color);
   color: var(--secondary-color);
@@ -131,9 +131,9 @@ ul li a:hover {
 }
 
 .title {
-  font-size: 4rem;
+  font-size: 5rem;
   font-weight: 700;
-  line-height: 4rem;
+  line-height: 5rem;
   color: var(--text-dark);
   margin-bottom: 1rem;
   text-align: start;
@@ -205,11 +205,11 @@ justify-content: space-around;
   width: min(24rem, 90%);
   border-radius: 100%;
   
-  background: linear-gradient(90deg, var(--primary-color), var(--primary-color-dark));
+ 
   background-size: 300%;
   
-  box-shadow: 0px -2px 10px rgba(0, 0, 0,0.4);
-  transition: transform 0.5s ease;
+  box-shadow: 0px -4px 10px rgba(0, 0, 0,0.4);
+  transition: all 0.3s ease-in-out;
 }
 .image img:hover {
   transform: scale(1.03);
@@ -223,6 +223,10 @@ justify-content: space-around;
     display: flex;
     justify-content: start;
     gap: .5rem;
+    
+}
+.social{
+  transition: all .3s ease-in-out;
 }
 .about{
     margin-top: 4rem;
@@ -357,6 +361,9 @@ width: 200px;
     
     
 }
+.ul.active {
+  left: 0;
+}
 .web{
   width: 95%;
   border-radius: .5rem;
@@ -381,6 +388,11 @@ width: 200px;
 .cl{
   width: 10%;
 }
+.social:hover{
+  /* background-color: var(--primary-color); */
+  color: var(--primary-color-dark);
+  padding: .5rem 0rem;
+}
 
 /* project */
 .project{
@@ -396,22 +408,38 @@ width: 200px;
 }
   ul {
     position: absolute;
-    width: 100%;
-    height: calc(100vh - 85px);
+    top: 8.7vh;
     left: -100%;
-    top: 85px;
+    width: 100%;
+    height: calc(100vh - 8.7vh);
     background-color: var(--extra-light);
     flex-direction: column;
     justify-content: center;
-    gap: 3rem;
+    align-items: center;
+    gap: 6rem;
+    /* font-size: 6rem; */
+    transition: left 0.3s ease-in-out;
+    
   }
+
+  ul.active {
+    left: 0;
+  }
+  ul.active li a{
+    font-size: 1.5rem;
+    border-top-color: var(--primary-color);
+  border-bottom-color: var(--primary-color);
+  
+    
+  }
+  
   .input,.textArea{
     width: 80%;
   }
   
-  nav #check:checked ~ ul {
+  /* nav #check:checked ~ ul {
     left: 0;
-  }
+  } */
   .cl{
     width: 50%;
   }
@@ -422,6 +450,12 @@ width: 200px;
   .contactTitle,.form{
     margin-inline: 1.2rem;
   }
+  .title{
+    text-align: center;
+    font-size: 4rem;
+    line-height: 4rem;
+  }
+
  
   .section__container {
     margin-top:7rem ;
@@ -462,9 +496,7 @@ width: 200px;
 }
 
 @media (max-width:1050px){
-  ul li a{
-    display: none;
-  }
+  
   .checkbox{
     display: block;
   }
