@@ -204,9 +204,9 @@ justify-content: space-around;
   place-items: center;
 }
 .image img {
-  width: min(24rem, 90%);
+  width: min(24rem, 100%);
   border-radius: 100%;
-  transform: rotate(10deg);
+  
  
   background-size: 300%;
   
