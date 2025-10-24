@@ -204,7 +204,7 @@ justify-content: space-around;
   place-items: center;
 }
 .image img {
-  width: min(24rem, 100%);
+  width: min(24rem, 90%);
   border-radius: 100%;
   
  
