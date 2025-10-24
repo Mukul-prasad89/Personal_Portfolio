@@ -20,7 +20,9 @@ html{scroll-behavior:smooth;}
 a {
   text-decoration: none;
 }
-
+.hamberger{
+  color: black;
+}
 body {
   
   min-height: 98vh;
@@ -69,7 +71,7 @@ nav input {
 
 nav .checkbox i {
   font-size: 2rem;
-  color: var(--primary-color);
+  color: var(--text-dark);
   cursor: pointer;
 }
 
@@ -204,7 +206,7 @@ justify-content: space-around;
 .image img {
   width: min(24rem, 90%);
   border-radius: 100%;
-  
+  transform: rotate(10deg);
  
   background-size: 300%;
   
