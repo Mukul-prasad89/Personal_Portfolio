@@ -6,8 +6,18 @@ hamberger.addEventListener('click',(e)=>{
     navMenu.classList.toggle("active");
     
 })
-
+const leetcode=document.querySelector('.leetcode');
+leetcode.addEventListener('click',(e)=>{
+    e.preventDefault();
+    window.open("https://leetcode.com/u/__Mukul__Prasad89/", "_blank");
+});
 const navLinks = document.querySelectorAll("nav ul li a");
+
+const down=document.querySelector('.resume');
+down.addEventListener('click',(e)=>{
+    e.preventDefault();
+    window.open("./assets/Mukul_Resume.pdf", "_blank");
+});
 
 navLinks.forEach(link => {
   link.addEventListener("click", () => {
